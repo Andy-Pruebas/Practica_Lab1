@@ -3,7 +3,7 @@ $usua = $_POST['user'];
 $clave = $_POST['clave'];
 
 if(empty($usua) || empty($clave)){
-	header("Location: index.html");
+	header("Location: index.php");
 	exit();
 }
 
@@ -18,11 +18,11 @@ if($row = $result->fetch_object()){
 		$_SESSION['user'] = $row->usua;
 		header("Location: articulos.php");
 	}else{
-		header("Location: index.html");
+		header("Location: index.php");
 		exit();
 	}
 }else{
-	header("Location: index.html");
+	header("Location: index.php");
 	exit();
 }
 ?>
