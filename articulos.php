@@ -1,8 +1,9 @@
 <?php
+session_start();
 include "conex.php";
 $conn  = conectar();
 $resul = $conn->query("select * from articulos");
-session_start();
+$_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
